@@ -1,0 +1,47 @@
+<h1 class="text-center">Todos os Veiculos</h1>
+<hr />
+
+
+<ul class="user_list list-group container">
+  {{#each users}}
+
+    <li class="list-group-item text-center">
+      <div class="col-md-3">
+        <label for="">{{this.nome}}</label>
+      </div>
+      <div class="col-md-3 text-center">
+        <label for="">{{this.modelo}}</label>
+      </div>
+      <div class="col-md-4 actions justify-content-end">
+        <a href="/users/edit/{{this.id}}">
+          {{> edit_user}}
+        </a>
+        <form action="/users/remove" method="post">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <button type="submit">
+            {{> del_user}}
+          </button>
+        </form>
+      </div>
+
+
+
+  {{/each}}
+</ul>
+
+   <div class="central container">
+    <div class="d-flex justify-content-end">
+      <div>
+        <form action="/users/add" method="get">
+          <button type="submit" class="btn btn-primary mx-2">Novo Veiculo</button>
+        </form>
+      </div>
+      <div>
+        <form action="/users" method="get">
+          <button type="submit" class="btn btn-primary">Home</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

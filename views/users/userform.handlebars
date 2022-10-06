@@ -1,0 +1,23 @@
+<div class = "div_form">
+<h1 class="text-center">Adicionar Veiculo</h1>
+
+<form action="/users/add" method="post">
+  <div class="fc">
+    <input type="text" name="nome" placeholder="Digite o nome do veiculo">
+    <input type="text" name="modelo" placeholder="Digite o modelo">
+    <input type="text" name="motor" placeholder="Digite o tipo de motor">
+    <input type="text" name="ano" placeholder="Digite o ano">
+    <input type="text" name="fabricante" placeholder="Digite seu fabricante">
+    <input type="text" name="valor" placeholder="Digite  o valor">
+    <input type="text" name="cor" placeholder="Digite a cor do veiculo"><br><br>
+    <input type="text" name="opcionais" placeholder="opcionais"><br>
+   <br><input type="submit" value="Cadastrar" />
+  </div>
+</form>
+
+<hr>
+
+<form action="/users/allUsers" method="get">
+  <button type="submit" class="btn btn-primary">Todos os Veiculos</button>
+</form>
+</div>

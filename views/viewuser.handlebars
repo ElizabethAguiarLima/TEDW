@@ -1,0 +1,23 @@
+{{#if auth}}
+
+  {{!-- <h2>O usuário {{user.name}} tem {{user.age}} anos de idade!</h2>
+ <form action="/users/home" method="get">
+    <button type="submit"  class="btn btn-primary">Home</button>
+  </form> --}}
+
+  <h2>Veiculos cadastrados</h2>
+  <!--Array -->
+    {{#each users}}
+  <ul>
+    <li>
+    
+  {{> users}} <!--Componente -->
+  
+  </li>
+  </ul>
+  {{/each}}
+ <form action="/users/home" method="get">
+
+<button type="submit"  class="btn btn-primary">Home</button>
+</form>
+{{/if}}
